@@ -77,12 +77,15 @@ Para personalizar o perfil, edite o arquivo `src/data/user.ts`:
 ## Testando no iPhone
 
 ### Pré-requisitos
+
 - iPhone com **Expo Go** instalado (App Store)
 - PC e iPhone na **mesma rede Wi-Fi**
 - Firewall do Windows permitindo a porta (porta padrão: 8081)
 
 ### Passo a passo
+
 1. **Inicie o servidor Expo** no terminal:
+
    ```bash
    npx expo start
    ```
@@ -103,20 +106,25 @@ Para personalizar o perfil, edite o arquivo `src/data/user.ts`:
 ### Troubleshooting
 
 #### Erro: "Could not connect to the server"
+
 - ✅ Verifique se estão na **mesma rede Wi-Fi**
 - ✅ Confirme que o terminal mostra `exp://192.168` (não `127.0.0.1`)
 - ✅ Pressione `l` no terminal para ativar **mode LAN**
 
 #### Firewall bloqueando conexão
+
 Execute no PowerShell como **Administrador**:
+
 ```powershell
 New-NetFirewallRule -DisplayName "Expo Dev" -Direction Inbound -Protocol TCP -LocalPort 8081 -Action Allow
 ```
 
 #### Porta em uso
+
 Se a porta 8081 estiver ocupada, o Expo usa automaticamente 8082, 8083, etc. Procure pela mensagem no terminal.
 
 #### Limpar cache
+
 ```bash
 rm -r .expo
 npx expo start --clear
@@ -127,6 +135,7 @@ npx expo start --clear
 Este projeto atende **100%** aos requisitos da atividade PDMII ATV1:
 
 ✅ **Interface (UI)**: Layout responsivo com todos os elementos:
+
 - Foto de perfil
 - Nome, username, biografia
 - Estatísticas (repositórios, seguidores, seguindo)
@@ -144,6 +153,7 @@ Este projeto atende **100%** aos requisitos da atividade PDMII ATV1:
 ## Desenvolvimento
 
 ### Estrutura do projeto
+
 ```
 projeto-github/
 ├── App.tsx                    # Componente principal
@@ -165,7 +175,9 @@ projeto-github/
 ```
 
 ### Adicionar novos repositórios
+
 Edite `src/data/user.ts` e adicione ao array `pinnedRepos`:
+
 ```typescript
 {
   id: '4',
@@ -179,7 +191,9 @@ Edite `src/data/user.ts` e adicione ao array `pinnedRepos`:
 ```
 
 ### Alterar dados do perfil
+
 Todos os dados editáveis estão em `src/data/user.ts`:
+
 - `avatarUrl`: URL da foto de perfil
 - `name`: Nome completo
 - `username`: Username do GitHub
@@ -191,12 +205,12 @@ Todos os dados editáveis estão em `src/data/user.ts`:
 
 ## Dependências principais
 
-| Pacote | Versão | Descrição |
-|--------|--------|-----------|
-| React Native | 0.72.10 | Framework mobile |
-| Expo | SDK 49 | Plataforma para desenvolvimento mobile |
-| TypeScript | 5.5.3 | Tipagem estática |
-| React | 18.2.0 | Biblioteca UI |
+| Pacote       | Versão  | Descrição                              |
+| ------------ | ------- | -------------------------------------- |
+| React Native | 0.72.10 | Framework mobile                       |
+| Expo         | SDK 49  | Plataforma para desenvolvimento mobile |
+| TypeScript   | 5.5.3   | Tipagem estática                       |
+| React        | 18.2.0  | Biblioteca UI                          |
 
 ## Comandos úteis
 
