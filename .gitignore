@@ -1,0 +1,8 @@
+node_modules/
+.expo/
+.expo-shared/
+*.log
+npm-debug.log*
+Yarn.lock
+**/ios/build/
+**/android/app/build/
