@@ -130,27 +130,6 @@ rm -r .expo
 npx expo start --clear
 ```
 
-## Requisitos do Projeto
-
-Este projeto atende **100%** aos requisitos da atividade PDMII ATV1:
-
-✅ **Interface (UI)**: Layout responsivo com todos os elementos:
-
-- Foto de perfil
-- Nome, username, biografia
-- Estatísticas (repositórios, seguidores, seguindo)
-- Cards de repositórios fixados
-- Itens customizados (status badge, organizações, contribuições)
-
-✅ **Tipagem (TypeScript)**: Interfaces `UserProfile` e `Repository` em `src/types.ts`
-
-✅ **Estilização**: `StyleSheet` organizado com tema dark autêntico do GitHub
-
-✅ **Perfil de inspiração**: Dados baseados em @maxxdiego
-
-✅ **Entrega**: Código exclusivamente na branch `main`, repositório público
-
-## Desenvolvimento
 
 ### Estrutura do projeto
 
